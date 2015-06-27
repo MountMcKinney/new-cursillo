@@ -1,0 +1,126 @@
+/*----Universal----*/
+*{
+  margin: 0;
+  font-family: 'Playfair+Display', 'Lora', 'Old+Standard+TT', sans-serif;
+}
+
+body {
+  background-color: #c5cae9;
+}
+
+/*----Header----*/
+header{
+  background-color: #3f51b5;
+  color: white;
+}
+
+/*----Menu----*/
+.nav {
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #303f9f;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff4081;
+}
+
+.show-more-nav {
+  color: white;
+}
+
+.menu-btn div {
+	position: relative;
+	left: 100%;
+	top: 64%;
+	padding-right: 8px;
+	margin-top: -0.50em;
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 200;
+	vertical-align: middle;
+	z-index: 99;
+}
+
+.menu-btn span {
+	display: block;
+	width: 27px;
+	height: 2px;
+	margin: 6px 13px;
+	background: rgb(255,255,255);
+	z-index: 99;
+}
+
+#responsive-menu{
+	display: none;
+}
+
+#menu {
+  display: none;
+}
+
+#responsive-menu ul{
+  margin: 15px;
+}
+
+#responsive-menu ul li {
+  margin: 8px 15px;
+  text-indent: -2rem;
+  padding: 6px 0px;
+}
+
+.hidden{
+  display: none;
+}
+
+.expand {
+	display: inline-block;
+  margin-top:15px;
+  margin-left: 10px;
+  width:200px;
+	/*background: rgba(0,0,0,0.8);*/
+}
+
+.expand li {
+  padding:12px;
+  text-align:left;
+  border-bottom:1px solid white;
+  position:relative;
+  z-index:99;
+}
+
+
+@media (min-width: 700px) {
+  #menu {
+    display: inline-block;
+  }
+
+  #responsive-menu, .mobile-nav, #menu-btn {
+    display: none;
+  }
+}
+
+/*----Footer----*/
+
+footer {
+  background-color: #3f51b5;
+}
+
+.social img {
+  height: 40px;
+  width: 40px;
+}
+
+#mount_logo {
+  color: #ff4081;
+  clear: both;
+}
+
+/*----Home-Content----*/
