@@ -1,5 +1,5 @@
 jQuery(function($){
      $( '.menu-btn').click(function(){
-       $('#responsive-menu').toggleClass('expand');
+       $('.responsive-menu').toggleClass('expand');
      })
 });

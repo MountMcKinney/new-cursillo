@@ -12,6 +12,13 @@ body {
 header{
   background-color: #3f51b5;
   color: white;
+  margin-bottom: 1rem;
+}
+
+#name {
+  padding: 30px 15px;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 /*----Menu----*/
@@ -40,8 +47,7 @@ a:hover {
 	position: relative;
 	left: 100%;
 	top: 64%;
-	padding-right: 8px;
-	margin-top: -0.50em;
+	margin-top: -5.3em;
 	line-height: 1.2;
 	font-size: 18px;
 	font-weight: 200;
@@ -51,29 +57,19 @@ a:hover {
 
 .menu-btn span {
 	display: block;
-	width: 27px;
-	height: 2px;
+	width: 32px;
+	height: 3px;
 	margin: 6px 13px;
 	background: rgb(255,255,255);
 	z-index: 99;
 }
 
-#responsive-menu{
+.responsive-menu{
 	display: none;
 }
 
 #menu {
   display: none;
-}
-
-#responsive-menu ul{
-  margin: 15px;
-}
-
-#responsive-menu ul li {
-  margin: 8px 15px;
-  text-indent: -2rem;
-  padding: 6px 0px;
 }
 
 .hidden{
@@ -82,18 +78,18 @@ a:hover {
 
 .expand {
 	display: inline-block;
-  margin-top:15px;
-  margin-left: 10px;
-  width:200px;
-	/*background: rgba(0,0,0,0.8);*/
+  width:210px;
+  margin-top: 2.75rem;
 }
 
 .expand li {
-  padding:12px;
+  margin: 8px 15px;
+  text-indent: -2rem;
+  padding: 15px 0 10px;
   text-align:left;
-  border-bottom:1px solid white;
   position:relative;
   z-index:99;
+  text-transform: uppercase;
 }
 
 
@@ -102,7 +98,7 @@ a:hover {
     display: inline-block;
   }
 
-  #responsive-menu, .mobile-nav, #menu-btn {
+  .responsive-menu, .mobile-nav, #menu-btn {
     display: none;
   }
 }
@@ -113,14 +109,24 @@ footer {
   background-color: #3f51b5;
 }
 
-.social img {
-  height: 40px;
-  width: 40px;
+footer a {
+  display: block;
+  text-align: center;
 }
 
 #mount_logo {
   color: #ff4081;
   clear: both;
+  margin-top: 1.5rem;
 }
 
 /*----Home-Content----*/
+main {
+  margin: 4rem 0 1rem;
+}
+
+@media (min-width:700px) {
+  main{
+    margin: 1rem 0;
+  }
+}

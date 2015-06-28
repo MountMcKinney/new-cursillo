@@ -15,6 +15,7 @@
           <h3>Cursillo</h3>
           <p>Diocese of Pensacola - Tallahassee</p>
         </div>
+    </header>
         <div class="mobile-nav nav">
           <div class="menu-btn" id="menu-btn">
              <div></div>
@@ -23,7 +24,7 @@
              <span></span>
           </div>
 
-          <div id="responsive-menu">
+          <div class="responsive-menu">
               <ul>
               <a href="{{ siteUrl('/home')}}"><li>Home</li></a>
               <a href="{{ siteUrl('/ultreya')}}"><li>Ultreya</li></a>
@@ -57,7 +58,6 @@
               </li>
           </ul>
         </div>
-      </header>
     <main>
       {% block content %}
       <p>
@@ -68,7 +68,7 @@
     {% block footer %}
     <footer>
         {# <a href="http://facebook.com/cursillo" class="social" id="facebook-icon"><img src="{{ baseUrl }}img/facebook-icon.svg"></a> #}
-        <a href="mailto:ptcursillistas@gmail.com" class="social" id="email-icon"><img src="{{ baseUrl }}img/mail-icon.svg">ptcursillistas@gmail.com</a>
+        <a href="mailto:ptcursillistas@gmail.com" class="social" id="email-icon">ptcursillistas@gmail.com</a>
         <a href="{{ siteUrl('/by-laws')}}" class="social">By-Laws</a>
         <a href="{{ siteUrl('/palanca')}}" class="social">Palanca</a>
         <a href="http://mountmckinney.com" target="_blank" id="mount_logo">Website by: &copy; {{"now"|date("Y")}} Mount McKinney</a>
