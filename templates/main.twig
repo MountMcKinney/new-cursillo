@@ -3,7 +3,7 @@
   <head>
       <link rel="shortcut icon" href="{{ baseUrl }}img/favicon.ico">
       <title>Pensacola-Tallahassee Cursillo</title>
-      <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Lora|Philosopher|Old+Standard+TT' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="{{ baseUrl }}css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       {% block head %}
@@ -12,10 +12,8 @@
   <body>
     <header>
         <div id="name">
-          <h3>Cursillo</h3>
-          <p>Diocese of Pensacola - Tallahassee</p>
+          <span><img src="{{baseUrl}}img/Cursillo.png"></span>
         </div>
-    </header>
         <div class="mobile-nav nav">
           <div class="menu-btn" id="menu-btn">
              <div></div>
@@ -23,58 +21,60 @@
              <span></span>
              <span></span>
           </div>
-
           <div class="responsive-menu">
               <ul>
-              <a href="{{ siteUrl('/home')}}"><li>Home</li></a>
-              <a href="{{ siteUrl('/ultreya')}}"><li>Ultreya</li></a>
-              <a href="{{ siteUrl('/secretariat')}}"><li>Secretariat</li></a>
-              <a href="{{ siteUrl('/school-of-leaders')}}"><li>School Of Leaders</li></a>
-              <a href="{{ siteUrl('/pre-cursillo')}}"><li>Pre-Cursillo</li></a>
-              <a href="{{ siteUrl('/three-day')}}"><li>Three Day</li></a>
-              <a href="{{ siteUrl('/fourth-day')}}"><li>Fourth Day</li></a>
-              <a href="{{ siteUrl('/about-us')}}"><li>About-Us</li></a>
+              <a href="{{siteUrl('/home')}}"><li>Home</li></a>
+              <a href="{{siteUrl('/ultreya')}}"><li>Ultreya</li></a>
+              <a href="{{siteUrl('/school-of-leaders')}}"><li>School Of Leaders</li></a>
+              <a href="{{siteUrl('/pre-cursillo')}}"><li>Pre-Cursillo</li></a>
+              <a href="{{siteUrl('/three-day')}}"><li>Three Day</li></a>
+              <a href="{{siteUrl('/fourth-day')}}"><li>Fourth Day</li></a>
+              <a href="{{siteUrl('/about-us')}}"><li>About-Us</li></a>
               </ul>
           </div>
         </div>
-
         <div id="menu" class="nav">
           <ul>
             <a href="{{ siteUrl('/home')}}"><li>Home</li></a>
-              <li class="show-more-nav">Events
+              <li class="show-more-nav event-nav">Events
                 <ul>
-                  <a href="{{ siteUrl('/ultreya')}}"><li>Ultreya</li></a>
-                  <a href="{{ siteUrl('/school-of-leaders')}}"><li>School Of Leaders</li></a>
                   <a href="{{ siteUrl('/pre-cursillo')}}"><li>Pre-Cursillo</li></a>
                   <a href="{{ siteUrl('/three-day')}}"><li>Three Day</li></a>
                   <a href="{{ siteUrl('/fourth-day')}}"><li>Fourth Day</li></a>
                 </ul>
               </li>
-              <li class="show-more-nav">Contact
-                <ul>
-                  <a href="{{ siteUrl('/secretariat')}}"><li>Secretariat</li></a>
-                  <a href="{{ siteUrl('/about-us')}}"><li>About Us</li></a>
-                </ul>
-              </li>
+              <a href="{{ siteUrl('/ultreya')}}"><li>Ultreya</li></a>
+              <a href="{{ siteUrl('/school-of-leaders')}}"><li>School Of Leaders</li></a>
+              <a href="{{ siteUrl('/about-us')}}"><li>About Us</li></a>
           </ul>
         </div>
+    </header>
     <main>
-      {% block content %}
-      <p>
-        This is example text.
-      </p>
-      {% endblock content %}
+      <div class="wrapper">
+        {% block content %}
+          <h1 class="home-title">Pensacola-Tallahassee Diocese Cursillo</h1>
+          <h2>Upcoming Cursillo Weekends</h2>
+          <p>Women's: August 27-30, 2015</p>
+          <p>Men's: October 1-4, 2015</p>
+          <h2>Peeps In Charge</h2>
+          <p><strong>Spiritual Director: </strong>Fr. Craig Smith, St. Louis Parish, Tallahassee</p>
+          <p><strong>Assistant Spiritual Director: </strong>Deacon Bob Macko, St. Louis Parish, Tallahassee</p>
+          <p><strong>Lay Director: </strong>Jeanette Aslin</p>
+        {% endblock content %}
+      </div>
     </main>
     {% block footer %}
     <footer>
         {# <a href="http://facebook.com/cursillo" class="social" id="facebook-icon"><img src="{{ baseUrl }}img/facebook-icon.svg"></a> #}
         <a href="mailto:ptcursillistas@gmail.com" class="social" id="email-icon">ptcursillistas@gmail.com</a>
+        <a href="{{ siteUrl('/prayer')}}" class="social">Prayer Requests</a>
         <a href="{{ siteUrl('/by-laws')}}" class="social">By-Laws</a>
-        <a href="{{ siteUrl('/palanca')}}" class="social">Palanca</a>
         <a href="http://mountmckinney.com" target="_blank" id="mount_logo">Website by: &copy; {{"now"|date("Y")}} Mount McKinney</a>
     </footer>
     {% endblock footer %}
     <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="{{ baseUrl }}js/app.js"></script>
+    {% block script %}
+    {% endblock script %}
   </body>
 </html>

@@ -1,0 +1,49 @@
+{% extends "main.twig" %}
+
+{% block head %}
+<script src="https://maps.googleapis.com/maps/api/js?sensor=FALSE"></script>
+<script>
+  function initialize() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var position = new google.maps.LatLng(30.753398, -85.552670);
+    var mapOptions = {
+      center: position,
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+      position: position,
+      map: map,
+      title: "St. Joseph the Worker"
+    });
+
+    var contentString = '<a target="_blank" href="https://www.google.com/maps/dir//1664+Main+St,+Chipley,+FL+32428/@30.7527939,-85.5525731,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x889301184e8c732f:0x86d37811380fd9b4!2m2!1d-85.5526639!2d30.753384">Directions to: St. Joseph the Worker</a>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock head %}
+
+{% block content %}
+<h2 class="page-title">School of Leader Schedule</h2>
+<p><strong>When: </strong>3rd Saturday of the Month</p>
+<p><strong>Where: </strong>Holy Name of Jesus<br />
+Religious Ed Building (Rm. 3/5) <br />
+1300 Valparaiso Blvd <br />
+Niceville, FL 32578 <br />
+<a target="_blank" href="">Directions</a>
+</p><br />
+<p><strong>For Months of April, July, & October: </strong>Meetings will be held at St. Joseph the Worker<br />
+1664 Main St. (FL-77) <br />
+Chipley, FL 32438</p>
+<p><strong>December: </strong>No Meeting</p>
+<h3 class="map-dir">Map (Click Pin For Directions to St. Joseph the Worker)</h3>
+<div id="map-canvas"></div>
+{% endblock content %}

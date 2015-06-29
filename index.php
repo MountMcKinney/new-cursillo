@@ -19,20 +19,16 @@
       );
 
       $app->get('/', function() use($app){
-        $app->render('main.twig');
+        $app->render('home.twig');
       })->name('home');
 
       $app->get('/home', function() use($app){
-        $app->render('main.twig');
+        $app->render('home.twig');
       })->name('home');
 
       $app->get('/ultreya', function() use($app){
         $app->render('ultreya.twig');
       })->name('ultreya');
-
-      $app->get('/secretariat', function() use($app){
-        $app->render('secretariat.twig');
-      })->name('secretariat');
 
       $app->get('/school-of-leaders', function() use($app){
         $app->render('school-of-leaders.twig');

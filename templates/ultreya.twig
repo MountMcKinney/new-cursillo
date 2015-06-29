@@ -1,0 +1,44 @@
+{% extends "main.twig" %}
+
+{% block head %}
+<script src="https://maps.googleapis.com/maps/api/js?sensor=FALSE"></script>
+<script>
+  function initialize() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var position = new google.maps.LatLng(30.501515, -86.469060);
+    var mapOptions = {
+      center: position,
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+      position: position,
+      map: map,
+      title: "Holy Name Of Jesus Catholic Church"
+    });
+
+    var contentString = '<a target="_blank" href="https://www.google.com/maps/dir//Holy+Name+of+Jesus+catholic+church,+1200+Valparaiso+Blvd,+Niceville,+FL+32578/@30.5014916,-86.4690706,17z/data=!4m13!1m4!3m3!1s0x889169c8231e8355:0xe1a5fb2ff472f048!2sHoly+Name+of+Jesus+catholic+church!3b1!4m7!1m0!1m5!1m1!1s0x889169c8231e8355:0xe1a5fb2ff472f048!2m2!1d-86.4690706!2d30.5014916">Directions to: Holy Name of Jesus</a>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock head %}
+
+{% block content %}
+<h2 class="page-title">Ultreya Meeting Schedule</h2>
+<p><strong>When: </strong>Last Thursday of the Month at 7pm <br />
+In December: A pot-luck (TBD) is held in place of a meeting</p>
+<p><strong>Where: </strong>Holy Name of Jesus <br />
+Religious Ed Building (Rm. 3/5) <br />
+1300 Valparaiso Blvd <br />
+Niceville, FL 32578 </p>
+<h3 class="map-dir">Map (Click Pin For Directions to Holy Name)</h3>
+<div id="map-canvas"></div>
+{% endblock content %}
