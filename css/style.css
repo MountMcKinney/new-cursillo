@@ -10,9 +10,9 @@ body {
 
 /*----Header----*/
 header{
-  background: lightcoral;
+  background: rgba(124, 255, 166, 0.52);
   margin-bottom: 1rem;
-  border-bottom: 30px solid navy;
+  border-bottom: 30px solid white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -153,7 +153,7 @@ a:link, a:visited, a:hover {
 /*----Footer----*/
 
 footer {
-  background:lightcoral;
+  background:rgba(124, 255, 166, 0.52);
   clear: both;
 }
 
@@ -208,14 +208,43 @@ main {
 
 .home-title {
   border-bottom: 2px solid white;
-  text-transform: capitalize;
+  font-family: 'Alice',serif;
+  text-transform: uppercase;
   margin-top: 3rem;
+  font-size: 2rem;
+}
+
+@media (min-width:800px) {
+  .home-title {
+    font-size: 2.8rem;
+  }
+}
+
+.home-content {
+  margin-top: 3rem;
+}
+
+.sub-heading {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 /*----Ultreya----*/
 
 .page-title {
-  border-bottom: 1px solid lightcoral;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: 'Alice',serif;
+}
+
+@media (min-width:800px) {
+  .page-title {
+    font-size: 2.8rem;
+  }
 }
 
 .map-dir {
@@ -230,11 +259,15 @@ main {
 }
 
 #map-canvas a:link, #map-canvas a:visited, #map-canvas a:hover {
-  color: navy;
+  color: black;
 }
 
 @media (min-width:1200px) {
   #map-canvas {
     height: 600px;
   }
+}
+
+.construction {
+  list-style: none;
 }

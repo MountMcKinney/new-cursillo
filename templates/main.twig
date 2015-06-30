@@ -3,8 +3,7 @@
   <head>
       <link rel="shortcut icon" href="{{ baseUrl }}img/favicon.ico">
       <title>Pensacola-Tallahassee Cursillo</title>
-      <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="{{ baseUrl }}css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Lora|Alice' rel='stylesheet' type='text/css'>      <link rel="stylesheet" href="{{ baseUrl }}css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       {% block head %}
       {% endblock head %}
@@ -53,13 +52,17 @@
       <div class="wrapper">
         {% block content %}
           <h1 class="home-title">Pensacola-Tallahassee Diocese Cursillo</h1>
-          <h2>Upcoming Cursillo Weekends</h2>
-          <p>Women's: August 27-30, 2015</p>
-          <p>Men's: October 1-4, 2015</p>
-          <h2>Peeps In Charge</h2>
-          <p><strong>Spiritual Director: </strong>Fr. Craig Smith, St. Louis Parish, Tallahassee</p>
-          <p><strong>Assistant Spiritual Director: </strong>Deacon Bob Macko, St. Louis Parish, Tallahassee</p>
-          <p><strong>Lay Director: </strong>Jeanette Aslin</p>
+          <div class="home-content">
+            <h2 class="sub-heading">Upcoming Cursillo Weekends</h2>
+            <p>Women's: August 27-30, 2015</p>
+            <p>Men's: October 1-4, 2015</p>
+          </div>
+          <div class="home-content">
+            <h2 class="sub-heading">Directors</h2>
+            <p><strong>Spiritual Director: </strong>Fr. Craig Smith, St. Louis Parish, Tallahassee</p>
+            <p><strong>Assistant Spiritual Director: </strong>Deacon Bob Macko, St. Louis Parish, Tallahassee</p>
+            <p><strong>Lay Director: </strong>Jeanette Aslin</p>
+          </div>
         {% endblock content %}
       </div>
     </main>
