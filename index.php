@@ -54,6 +54,10 @@
         $app->render('by-laws.twig');
       })->name('by-laws');
 
+      $app->get('/prayer', function() use($app){
+        $app->render('prayer.twig');
+      })->name('prayer');
+
       $app->get('/palanca', function() use($app){
         $app->render('palanca.twig');
       })->name('palanca');

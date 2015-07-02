@@ -5,14 +5,13 @@
 }
 
 body {
-  background-color: #c5cae9;
 }
 
 /*----Header----*/
 header{
   background: rgba(124, 255, 166, 0.52);
   margin-bottom: 1rem;
-  border-bottom: 30px solid white;
+  border-bottom: 20px solid slategrey;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -34,22 +33,22 @@ header{
 
 .mobile-nav ul {
   list-style: none;
-  background:rgba(85, 85, 130, 0.3);
+  background: slategrey;
   margin-left: -2rem;
 }
 
 a:link, a:visited, a:hover {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 @media (min-width:800px) {
 
   a:link, a:visited {
-    color: black;
+    color: slategrey;
   }
   a:hover {
-    color: white;
+    color: black;
   }
 }
 
@@ -70,7 +69,7 @@ a:link, a:visited, a:hover {
 	width: 32px;
 	height: 3px;
 	margin: 6px 13px;
-	background: rgb(255,255,255);
+	background: slategrey;
 	z-index: 99;
 }
 
@@ -100,8 +99,8 @@ a:link, a:visited, a:hover {
   text-transform: uppercase;
 }
 
-.expand a:link, .exand a:visited {
-  color: white;
+.expand a:link, .expand a:visited {
+  color: rgba(124, 255, 166, 0.52);
 }
 
 
@@ -120,11 +119,11 @@ a:link, a:visited, a:hover {
   }
 
   .show-more-nav {
-    color: black;
+    color: slategrey;
   }
 
   .show-more-nav:hover {
-    color: white;
+    color: black;
   }
 
   .show-more-nav:hover ul {
@@ -155,6 +154,7 @@ a:link, a:visited, a:hover {
 footer {
   background:rgba(124, 255, 166, 0.52);
   clear: both;
+  margin-top: 7rem;
 }
 
 footer a {
@@ -180,7 +180,7 @@ footer a {
 
 @media (min-width:800px) {
   #mount_logo {
-    color: white;
+    color: black;
   }
 }
 
@@ -207,7 +207,7 @@ main {
 /*----Home----*/
 
 .home-title {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgba(124, 255, 166, 0.52);
   font-family: 'Alice',serif;
   text-transform: uppercase;
   margin-top: 3rem;
@@ -226,6 +226,7 @@ main {
 
 .sub-heading {
   font-size: 1.8rem;
+  margin: 5rem 0 1rem;
 }
 
 p {
@@ -235,10 +236,11 @@ p {
 /*----Ultreya----*/
 
 .page-title {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(124, 255, 166, 0.52);
   text-transform: uppercase;
   font-size: 2rem;
   font-family: 'Alice',serif;
+  margin-bottom: 3rem;
 }
 
 @media (min-width:800px) {
