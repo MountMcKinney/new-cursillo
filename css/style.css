@@ -164,10 +164,23 @@ footer a {
   margin-top: 1rem;
 }
 
+footer div ul {
+  list-style: none;
+}
+
 @media (min-width:800px) {
   footer a {
     margin: 1rem 12rem;
   }
+}
+
+/*.social{
+  width: 40px;
+}*/
+
+.social img {
+  width: 40px;
+  height: 40px;
 }
 
 #mount_logo {

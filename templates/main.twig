@@ -68,11 +68,15 @@
     </main>
     {% block footer %}
     <footer>
-        {# <a href="http://facebook.com/cursillo" class="social" id="facebook-icon"><img src="{{ baseUrl }}img/facebook-icon.svg"></a> #}
-        <a href="mailto:ptcursillistas@gmail.com" class="social" id="email-icon">ptcursillistas@gmail.com</a>
-        <a href="{{ siteUrl('/prayer')}}" class="social">Prayer Requests</a>
-        <a href="{{ siteUrl('/by-laws')}}" class="social">By-Laws</a>
-        <a href="http://mountmckinney.com" target="_blank" id="mount_logo">Website by: &copy; {{"now"|date("Y")}} Mount McKinney</a>
+      <div>
+        <ul>
+          <a href="https://www.facebook.com/groups/ptcursillistas" class="social" id="facebook-icon"><li><img src="{{ baseUrl }}img/facebook-icon.svg"></li></a>
+          <a href="mailto:ptcursillistas@gmail.com" class="social" id="email-icon"><li><img src="{{baseUrl}}img/email-icon.svg"></li></a>
+          <a href="mailto:ptcursillistas@gmail.com"><li>Prayer Requests</li></a>
+          <a href="{{ siteUrl('/by-laws')}}"><li>By-Laws</li></a>
+          <a href="http://mountmckinney.com" target="_blank" id="mount_logo"><li>Website by: &copy; {{"now"|date("Y")}} Mount McKinney</li></a>
+        </ul>
+      </div>
     </footer>
     {% endblock footer %}
     <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
